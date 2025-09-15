@@ -795,7 +795,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  transition: opacity 0.2s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
   will-change: '';
   -webkit-tap-highlight-color: transparent;
 }
@@ -4862,7 +4862,7 @@ Site Overrides
 /* All Sizes */
 
 .ui.container {
-  display: block;
+  display: inline-block;
   max-width: 100% !important;
   margin: 0 auto;
   text-align: center;
@@ -4966,12 +4966,14 @@ Site Overrides
 
 .ui.text.container {
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  max-width: 700px !important;
-  line-height: 1.5;
+  max-width: 500px !important;
+  min-width: 50px;
+  line-height: 1;
 }
 
 .ui.text.container {
-  font-size: 1.14285714rem;
+  font-size: 1.13rem;
+  display: inline-block;
 }
 
 /* Fluid */

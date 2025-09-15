@@ -1,38 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Punchball Street</title>
-    <link rel="stylesheet" href="semantic.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="src/logo-ball.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-</head>
-<body>
-    <!-- Menú de navegación -->
-    <div class="ui inverted stackable menu">
-        <div class="ui container">
-            <a class="item"></a>
-            <a href="main.html" class="item" style="color: #FFB700 !important;">Inicio</a>
-            <a href="#characteristics" class="item" style="color: #FFB700 !important;">Características</a>
-            <a href="#" class="header item">
-                <img src="src/logo-ball.png" alt="Isotipo"></a>
-            <a href="#avatars" class="item" style="color: #FFB700 !important;">&nbsp;&nbsp;&nbsp; Avatares &nbsp;&nbsp;&nbsp;</a>
-            <a href="#gallery" class="item" style="color: #FFB700 !important;">&nbsp;&nbsp;&nbsp;&nbsp; Galería &nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <!-- Botón de inicio de sesión
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Punchball Street</title>
+        <link rel="stylesheet" href="semantic.css" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="src/logo-ball.png" type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+        />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    </head>
+    <body>
+        <!-- Menú de navegación -->
+        <div class="ui inverted stackable menu">
+            <div class="ui container">
+                <a class="item"></a>
+                <a
+                    href="main.html"
+                    class="item"
+                    style="color: #ffb700 !important"
+                    >Inicio</a
+                >
+                <a
+                    href="#characteristics"
+                    class="item"
+                    style="color: #ffb700 !important"
+                    >Características</a
+                >
+                <a href="#" class="header item">
+                    <img src="src/logo-ball.png" alt="Isotipo"
+                /></a>
+                <a
+                    href="#avatars"
+                    class="item"
+                    style="color: #ffb700 !important"
+                    >Avatares</a
+                >
+                <a
+                    href="#gallery"
+                    class="item"
+                    style="color: #ffb700 !important";>Galería
+                </a>
+                <!-- Botón de inicio de sesión
             <div class="right menu">
                 <div class="item">
                     <div class="ui inverted button">Iniciar Sesión</div>
                 </div>
             </div>
-            -->
+            --></div>
         </div>
-    </div>
 
-    <!-- Sección Hero
+        <!-- Sección Hero
     <section class="hero-section">
         <div class="ui text container">
             <h1 class="ui inverted header" style="font-size: 3.5rem;">
@@ -52,146 +75,258 @@
         </div>
     </section>
     -->
-    <!-- Sección Hero -->
-    <section class="hero-section">
+        <!-- Sección Hero -->
+        <section class="hero-section">
             <video class="hero-video" autoplay muted poster="src/LOGOS-13.png">
-            <source src="src/punchball-logo-animado.mp4" type="video/mp4">
+                <source src="src/punchball-logo-animado.mp4" type="video/mp4" />
             </video>
-        <div class="ui text container">
-            <h1 class="ui inverted header" style="font-size: 3.5rem;">
-                DOMINA LAS CALLES
-            </h1>
-            <h2 class="ui inverted header" style="font-weight: 300;">
-                El caos del pelotica de goma se encuentra con la estrategia del Baseball 5
-            </h2>
-            <div class="cta-button">
-                <div id="downloader" class="ui huge yellow button">
-                    <a href="src/baseball_street_013.apk">¡Jugar Ahora!</a>
-                </div>
+            <div class="ui text container" id="hero-content">
+                <h1
+                    class="ui inverted header"
+                    style="font-size: 2.7rem; display: inline-block"
+                >
+                    DOMINA LAS CALLES
+                </h1>
+                <h2
+                    class="ui inverted header"
+                    style="
+                        font-weight: 0.5rem;
+                        font-size: 1.5rem;
+                        display: inline-block;
+                        line-height: 1.7rem;
+                    "
+                >
+                    El caos del pelotica de goma se encuentra con la estrategia
+                    del Baseball 5
+                </h2>
+                <div class="cta-button">
+                    <div
+                        id="downloader"
+                        class="ui huge yellow button"
+                        style="display: inline-block"
+                    >
+                        <a href="">¡Jugar Ahora!</a>
+                    </div>
+                    <!--Trailer Button
                 <div class="ui huge inverted button">
                     <a href="src/trailer.mp4" id="trailer"><i class="play icon"></i>Ver Trailer</a>
                 </div>
+                --></div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Sección de Características -->
-    <section class="game-features">
-        <div class="ui container">
-            <h2 id="characteristics" class="ui inverted header centered" style="text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: #FFB700">
-                CARACTERÍSTICAS PRINCIPALES
-            </h2>
-            
-            <div class="ui three column stackable grid">
-                <div class="column">
-                    <div class="ui raised very padded text segment inverted" style="text-align: center;">
-                        <i class="huge street view icon"></i>
-                        <h3>Elige tu leyenda callejera</h3>
-                        <p>Buscarás demostrar ser el mejor jugador de Punchball y a su vez defender tu sector y otros territorios de la ciudad.
-                        </p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui raised very padded text segment inverted" style="text-align: center;">
-                        <i class="huge map outline icon"></i>
-                        <h3>Ningún Partido Es Igual</h3>
-                        <p>La distancia entre bases, la topografía del terreno, y los elementos interactuables, varían según el escenario.                           
-                        </p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui raised very padded text segment inverted" style="text-align: center;">
-                        <i class="huge map signs icon"></i>
-                        <h3>Controla El Caos</h3>
-                        <p>Golpea la pelota y prepárate para correr por todas las bases, o cacha la pelota y lanza a base.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección de Avatares -->
-    <section class="game-features">
-        <div class="ui container">
-            <h2 id="avatars" class="ui inverted header centered" style="color:#FFB700; text-align: center; font-size: 2.5rem; margin-bottom: 50px;">
-                AVATARES
-            </h2>
-            <div class="ui three column stackable grid">
-                <div class="column">
-                    <div class="ui card character-card">
-                        <div class="image" style="background-image: url(src/fondo-street.png); background-size: cover;">
-                            <img src="src/KIMBERLY.png" alt="Kimberly">
+        <!-- Sección de Características -->
+        <section class="game-features">
+            <div class="ui container">
+                <h2
+                    id="characteristics"
+                    class="ui inverted header centered"
+                    style="
+                        text-align: center;
+                        font-size: 2.5rem;
+                        margin-bottom: 50px;
+                        color: #ffb700;
+                    "
+                >
+                    CARACTERÍSTICAS PRINCIPALES
+                </h2>
+
+                <div class="ui three column stackable grid">
+                    <div class="column">
+                        <div
+                            class="ui raised very padded text segment inverted"
+                            style="text-align: center"
+                        >
+                            <i class="huge street view icon"></i>
+                            <h3>Elige tu leyenda callejera</h3>
+                            <p>
+                                Buscarás demostrar ser el mejor jugador de
+                                Punchball y a su vez defender tu sector y otros
+                                territorios de la ciudad.
+                            </p>
                         </div>
-                        <div class="content" style="background-color: #FFB700;">
-                            <div class="header">Kimberly</div>
-                            <div class="meta">
-                                <span class="category">19 años</span>
-                            </div>
-                            <div class="description">
-                                Prospecta desde muy joven con talento innato para el Punchball. Se ha esforzado mucho para llegar al sitio en el que está.
-                            </div>
+                    </div>
+                    <div class="column">
+                        <div
+                            class="ui raised very padded text segment inverted"
+                            style="text-align: center"
+                        >
+                            <i class="huge map outline icon"></i>
+                            <h3>Ningún Partido Es Igual</h3>
+                            <p>
+                                La distancia entre bases, la topografía del
+                                terreno, y los elementos interactuables, varían
+                                según el escenario.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div
+                            class="ui raised very padded text segment inverted"
+                            style="text-align: center"
+                        >
+                            <i class="huge map signs icon"></i>
+                            <h3>Controla El Caos</h3>
+                            <p>
+                                Golpea la pelota y prepárate para correr por
+                                todas las bases, o cacha la pelota y lanza a
+                                base.
+                            </p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="column">
-                    <div class="ui card character-card">
-                        <div class="image" style="background-image: url(src/fondo-street.png); background-size: cover;">
-                            <img src="src/MYGUEL.png" alt="Myguel">
-                        </div>
-                        <div class="content" style="background-color: #FFB700;">
-                            <div class="header">Myguel</div>
-                            <div class="meta">
-                                <span class="category">16 años y medio</span>
+            </div>
+        </section>
+
+        <!-- Sección de Avatares -->
+        <section class="game-features">
+            <div class="ui container">
+                <h2
+                    id="avatars"
+                    class="ui inverted header centered"
+                    style="
+                        color: #ffb700;
+                        text-align: center;
+                        font-size: 2.5rem;
+                        margin-bottom: 50px;
+                    "
+                >
+                    AVATARES
+                </h2>
+                <div class="ui three column stackable grid">
+                    <div class="column">
+                        <div class="ui card character-card">
+                            <div
+                                class="image"
+                                style="
+                                    background-image: url(src/fondo-street.png);
+                                    background-size: cover;
+                                "
+                            >
+                                <img src="src/KIMBERLY.png" alt="Kimberly" />
                             </div>
-                            <div class="description">
-                                Joven con aspiraciones de grandeza, quiere ser el mejor y va por todo para demostrarlo.
+                            <div
+                                class="content"
+                                style="background-color: #ffb700"
+                            >
+                                <div class="header">Kimberly</div>
+                                <div class="meta">
+                                    <span class="category">19 años</span>
+                                </div>
+                                <div class="description">
+                                    Prospecta desde muy joven con talento innato
+                                    para el Punchball. Se ha esforzado mucho
+                                    para llegar al sitio en el que está.
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="column">
-                    <div class="ui card character-card">
-                        <div class="image" style="background-image: url(src/fondo-street.png); background-size: cover;">
-                            <img alt="Ramón" id="ramonresize" src="src/ramon.png">
-                        </div>
-                        <div class="content" style="background-color: #FFB700;">
-                            <div class="header">Ramón</div>
-                            <div class="meta">
-                                <span class="category">Desconocida</span>
+
+                    <div class="column">
+                        <div class="ui card character-card">
+                            <div
+                                class="image"
+                                style="
+                                    background-image: url(src/fondo-street.png);
+                                    background-size: cover;
+                                "
+                            >
+                                <img src="src/MYGUEL.png" alt="Myguel" />
                             </div>
-                            <div class="description">
-                                Dicen sus vecinos que fue un excelente jugador de Punchball, pero nadie lo ha visto jugar en mucho tiempo. 
+                            <div
+                                class="content"
+                                style="background-color: #ffb700"
+                            >
+                                <div class="header">Myguel</div>
+                                <div class="meta">
+                                    <span class="category"
+                                        >16 años y medio</span
+                                    >
+                                </div>
+                                <div class="description">
+                                    Joven con aspiraciones de grandeza, quiere
+                                    ser el mejor y va por todo para demostrarlo.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="ui card character-card">
+                            <div
+                                class="image"
+                                style="
+                                    background-image: url(src/fondo-street.png);
+                                    background-size: cover;
+                                "
+                            >
+                                <img
+                                    alt="Ramón"
+                                    id="ramonresize"
+                                    src="src/ramon.png"
+                                />
+                            </div>
+                            <div
+                                class="content"
+                                style="background-color: #ffb700"
+                            >
+                                <div class="header">Ramón</div>
+                                <div class="meta">
+                                    <span class="category">Desconocida</span>
+                                </div>
+                                <div class="description">
+                                    Dicen sus vecinos que fue un excelente
+                                    jugador de Punchball, pero nadie lo ha visto
+                                    jugar en mucho tiempo.
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección de Screenshots -->
-    <section class="screenshot-section">
-        <div class="ui container">
-            <h2 id="gallery" class="ui inverted header centered" style="color: #FFB700; font-size: 2.5rem; margin-bottom: 50px;">
-                GALERÍA
-            </h2>
-            <div class="ui stackable three column grid">
-                <div class="column">
-                    <img class="ui rounded image" alt="Screenshot" src="https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80">
-                </div>
-                <div class="column">
-                    <img class="ui rounded image" alt="Screenshot" src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
-                </div>
-                <div class="column">
-                    <img class="ui rounded image" alt="Screenshot" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80">
+        <!-- Sección de Screenshots -->
+        <section class="screenshot-section">
+            <div class="ui container">
+                <h2
+                    id="gallery"
+                    class="ui inverted header centered"
+                    style="
+                        color: #ffb700;
+                        font-size: 2.5rem;
+                        margin-bottom: 50px;
+                    "
+                >
+                    GALERÍA
+                </h2>
+                <div class="ui stackable three column grid">
+                    <div class="column">
+                        <img
+                            class="ui rounded image"
+                            alt="Screenshot"
+                            src="https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80"
+                        />
+                    </div>
+                    <div class="column">
+                        <img
+                            class="ui rounded image"
+                            alt="Screenshot"
+                            src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                        />
+                    </div>
+                    <div class="column">
+                        <img
+                            class="ui rounded image"
+                            alt="Screenshot"
+                            src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección de Newsletter 
+        <!-- Sección de Newsletter 
     <section class="game-features">
         <div class="ui container">
             <div class="ui two column stackable grid">
@@ -226,53 +361,88 @@
         </div>
     </section>
     -->
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="ui container">
-            <div class="ui stackable three column grid">
-                <div class="column">
-                    <h4 class="ui inverted header">Punchball Street</h4>
-                </div>
-                <div class="ui stackable three row grid">
-                <p>Disponible pronto en su versión completa, con increíbles features, escenarios y más.</p>
-                </div>
-            </div>
-                <!--Sección de feedback
-                <div class="column">
-                    <h4 class="ui inverted header">Enlaces</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">Soporte</a>
-                        <a href="#" class="item">Foro</a>
-                        <a href="#" class="item">Contacto</a>
+        <script>
+            gsap.from("#hero-content", {
+                duration: 3,
+                opacity: 0,
+                stagger: 0.5,
+                x: -500,
+            });
+            gsap.to("#hero-content", { duration: 1, scale: 1.2 });
+            gsap.from(".cta-button", {
+                duration: 1,
+                y: 200,
+                scale: -2,
+                delay: 3,
+                ease: "elastic.inOut(1,0.5)",
+            });
+            gsap.from(".column", {
+                duration: 1.5,
+                x: 700,
+                stagger: 0.3,
+                delay: 1,
+            });
+        </script>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="ui container">
+                <div class="ui stackable three column grid">
+                    <div class="column qr-column">
+                        <h4 class="ui.inverted.header.footer">Punchball Street</h4>
+                        <p>
+                            Disponible pronto en su versión completa, con
+                            increíbles features, escenarios y más.
+                        </p>
+                    </div>
+                    <div class="column qr-column">
+                        <h4 class="ui.inverted.header.footer">¡Descárgalo ahora!</h4>
+                        <div class="qr-container">
+                            <img
+                                src="src/qr1.png"
+                                alt="Código QR"
+                                width="120"
+                            />
+                            <p style="margin-top: 10px; font-size: 0.9em">
+                                Escanea para descargar
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column qr-column">
+                        <h4 class="ui.inverted.header.footer">Desarrollado por</h4>
+                        <div class="logo-container">
+                            <a href="http://www.movilnet.com.ve/sitio/">
+                                <img
+                                    src="src/movilnet.png"
+                                    alt="Logo Movilnet"
+                                    width="120"
+                                />
+                            </a>
+                        </div>
                     </div>
                 </div>
-                -->
-            <div class="ui stackable three column grid">
-                <div class="column">
-                    <h4 class="ui inverted header">Desarrollado por</h4>
-                </div>
-                <div class="ui stackable three row grid">
-                    <a href="http://www.movilnet.com.ve/sitio/"><img src="src/movilnet.png" alt="Logo Movilnet" width="80"></a>
-                </div>
+                <div class="ui section divider"></div>
+                <p>
+                    &copy; 2025 Punchball Street. Todos los derechos reservados.
+                </p>
             </div>
-        <div class="ui section divider"></div>
-            <p>&copy; 2025 Punchball Street. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-    <script>
-        // Inicializar componentes de Semantic UI
-        $('.ui.checkbox').checkbox();
-        
-        // Smooth scroll para enlaces de anclaje
-        $('a[href^="#"]').on('click', function(event) {
-            var target = $(this.getAttribute('href'));
-            if(target.length) {
-                event.preventDefault();
-                $('html, body').stop().animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-            }
-        });
-    </script>
-</body>
+        </footer>
+        <script>
+            // Inicializar componentes de Semantic UI
+            $(".ui.checkbox").checkbox();
+
+            // Smooth scroll para enlaces de anclaje
+            $('a[href^="#"]').on("click", function (event) {
+                var target = $(this.getAttribute("href"));
+                if (target.length) {
+                    event.preventDefault();
+                    $("html, body").stop().animate(
+                        {
+                            scrollTop: target.offset().top,
+                        },
+                        1000
+                    );
+                }
+            });
+        </script>
+    </body>
 </html>
