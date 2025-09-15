@@ -15,12 +15,12 @@ h3,
 h4 {
     font-display: flex !important;
 }
-.ui.inverted.menu {
+/* .ui.inverted.menu {
     background-color: #0f0f0f;
     border-radius: 0;
     display: inline-block;
     text-align: center;
-}
+} */
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.7));
     background-size: contain;
@@ -161,7 +161,8 @@ h4 {
 }
 
 /* Contenedores de imagen consistentes */
-.qr-container, .logo-container {
+.qr-container,
+.logo-container-movilnet {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,13 +171,15 @@ h4 {
     padding: 15px 0;
 }
 
-.qr-container img, .logo-container img {
+.qr-container img,
+.logo-container-movilnet img {
     border-radius: 10px;
     transition: transform 0.3s ease;
     margin-bottom: 10px;
 }
 
-.qr-container img:hover, .logo-container img:hover {
+.qr-container img:hover,
+.logo-container-movilnet img:hover {
     transform: scale(1.05);
 }
 
@@ -185,14 +188,82 @@ h4 {
     .column.qr-column {
         margin: 1.5rem 0;
     }
-    
+
     .ui.inverted.header.footer {
         min-height: auto;
         margin-bottom: 0.8rem;
     }
-    
+
     .column.qr-column > p {
         min-height: auto;
         margin-bottom: 1rem;
     }
+}
+.custom-navbar {
+    display: flex;
+    align-items: center;
+    background-color: #1b1c1d;
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    max-width: auto;
+    width: 100%;
+}
+
+.nav-section {
+    display: flex;
+    flex: 1;
+}
+
+.nav-section.left {
+    justify-content: flex-end;
+}
+
+.nav-section.right {
+    justify-content: flex-start;
+}
+
+.logo-container {
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    max-width: 4rem;
+}
+
+.nav-item {
+    color: #ffb700 !important;
+    padding: 18px 20px !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-item:hover {
+    background-color: #ffb700ff !important;
+    transform: translateY(-2px);
+}
+
+.nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffb700;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-item:hover::after {
+    width: 70%;
+}
+
+.logo {
+    height: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
 }
