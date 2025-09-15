@@ -4,9 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Punchball Street</title>
-        <link rel="stylesheet" href="semantic.css" />
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="icon" href="src/logo-ball.png" type="image/x-icon" />
+        <link rel="stylesheet" href="src/styles/semantic.css" />
+        <link rel="stylesheet" href="src/styles/styles.css" />
+        <link
+            rel="icon"
+            href="src/assets/images/logo-ball.png"
+            type="image/x-icon"
+        />
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
@@ -16,57 +20,25 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     </head>
     <body>
-        <!-- Menú de navegación 
-        <div class="ui inverted stackable menu">
-            <div class="ui container">
-                <a class="item"></a>
-                <a
-                    href="main.html"
-                    class="item"
-                    style="color: #ffb700 !important"
-                    >Inicio</a
-                >
-                <a
-                    href="#characteristics"
-                    class="item"
-                    style="color: #ffb700 !important"
-                    >Características</a
-                >
-                <a href="#" class="header item">
-                    <img src="src/logo-ball.png" alt="Isotipo"
-                /></a>
-                <a
-                    href="#avatars"
-                    class="item"
-                    style="color: #ffb700 !important"
-                    >Avatares</a
-                >
-                <a
-                    href="#gallery"
-                    class="item"
-                    style="color: #ffb700 !important";>Galería
-                </a>
-                <!-- Botón de inicio de sesión
-            <div class="right menu">
-                <div class="item">
-                    <div class="ui inverted button">Iniciar Sesión</div>
-                </div>
-            </div>
-            -</div>
-        </div>-->
         <div class="nav-container">
             <div class="custom-navbar">
                 <div class="nav-section left">
-                    <a href="main.html" class="nav-item">Inicio</a>
-                    <a href="#characteristics" class="nav-item">Características</a>
+                    <a href="index.html" class="nav-item">Inicio</a>
+                    <a href="#characteristics" class="nav-item"
+                        >Características</a
+                    >
                 </div>
-                
+
                 <div class="logo-container">
                     <a href="#" class="header item">
-                        <img src="src/logo-ball.png" alt="Isotipo" class="logo">
+                        <img
+                            src="src/assets/images/logo-ball.png"
+                            alt="Isotipo"
+                            class="logo"
+                        />
                     </a>
                 </div>
-                
+
                 <div class="nav-section right">
                     <a href="#avatars" class="nav-item">Avatares</a>
                     <a href="#gallery" class="nav-item">Galería</a>
@@ -95,8 +67,16 @@
     -->
         <!-- Sección Hero -->
         <section class="hero-section">
-            <video class="hero-video" autoplay muted poster="src/LOGOS-13.png">
-                <source src="src/punchball-logo-animado.mp4" type="video/mp4" />
+            <video
+                class="hero-video"
+                autoplay
+                muted
+                poster="src/assets/images/LOGOS-13.png"
+            >
+                <source
+                    src="src/assets/videos/punchball-logo-animado.mp4"
+                    type="video/mp4"
+                />
             </video>
             <div class="ui text container" id="hero-content">
                 <h1
@@ -121,13 +101,13 @@
                     <div
                         id="downloader"
                         class="ui huge button"
-                        style="display: inline-block; background-color: #ffb700;"
+                        style="display: inline-block; background-color: #ffb700"
                     >
                         <a href="">¡Jugar Ahora!</a>
                     </div>
                     <!--Trailer Button
                 <div class="ui huge inverted button">
-                    <a href="src/trailer.mp4" id="trailer"><i class="play icon"></i>Ver Trailer</a>
+                    <a href="src/assets/video/trailer.mp4" id="trailer"><i class="play icon"></i>Ver Trailer</a>
                 </div>
                 --></div>
             </div>
@@ -207,6 +187,7 @@
                         text-align: center;
                         font-size: 2.5rem;
                         margin-bottom: 50px;
+                        margin-top: -1rem !important
                     "
                 >
                     AVATARES
@@ -217,11 +198,14 @@
                             <div
                                 class="image"
                                 style="
-                                    background-image: url(src/fondo-street.png);
+                                    background-image: url(src/assets/images/fondo-street.png);
                                     background-size: cover;
                                 "
                             >
-                                <img src="src/KIMBERLY.png" alt="Kimberly" />
+                                <img
+                                    src="src/assets/images/KIMBERLY.png"
+                                    alt="Kimberly"
+                                />
                             </div>
                             <div
                                 class="content"
@@ -245,11 +229,14 @@
                             <div
                                 class="image"
                                 style="
-                                    background-image: url(src/fondo-street.png);
+                                    background-image: url(src/assets/images/fondo-street.png);
                                     background-size: cover;
                                 "
                             >
-                                <img src="src/MYGUEL.png" alt="Myguel" />
+                                <img
+                                    src="src/assets/images/MYGUEL.png"
+                                    alt="Myguel"
+                                />
                             </div>
                             <div
                                 class="content"
@@ -274,14 +261,14 @@
                             <div
                                 class="image"
                                 style="
-                                    background-image: url(src/fondo-street.png);
+                                    background-image: url(src/assets/images/fondo-street.png);
                                     background-size: cover;
                                 "
                             >
                                 <img
                                     alt="Ramón"
                                     id="ramonresize"
-                                    src="src/ramon.png"
+                                    src="src/assets/images/ramon.png"
                                 />
                             </div>
                             <div
@@ -379,6 +366,7 @@
         </div>
     </section>
     -->
+        <!-- Animaciones-->
         <script>
             gsap.from("#hero-content", {
                 duration: 3,
@@ -391,11 +379,14 @@
                 duration: 1,
                 y: 200,
                 scale: -2,
-                delay: 3,
+                delay: 2.5,
                 ease: "elastic.inOut(1,0.5)",
             });
+            gsap.from("#characteristics", { y: -200 });
+            gsap.from("#avatars", { y: -200, duration: 1, delay: 1 });
+            gsap.from("#gallery", { y: -200, duration: 1, delay: 2 });
             gsap.from(".column", {
-                duration: 1.5,
+                duration: 1,
                 x: 700,
                 stagger: 0.3,
                 delay: 1,
@@ -406,17 +397,21 @@
             <div class="ui container">
                 <div class="ui stackable three column grid">
                     <div class="column qr-column">
-                        <h4 class="ui.inverted.header.footer">Punchball Street</h4>
+                        <h4 class="ui.inverted.header.footer">
+                            Punchball Street
+                        </h4>
                         <p>
                             Disponible pronto en su versión completa, con
                             increíbles features, escenarios y más.
                         </p>
                     </div>
                     <div class="column qr-column">
-                        <h4 class="ui.inverted.header.footer">¡Descárgalo ahora!</h4>
+                        <h4 class="ui.inverted.header.footer">
+                            ¡Descárgalo ahora!
+                        </h4>
                         <div class="qr-container">
                             <img
-                                src="src/qr1.png"
+                                src="src/assets/images/qr1.png"
                                 alt="Código QR"
                                 width="120"
                             />
@@ -426,11 +421,13 @@
                         </div>
                     </div>
                     <div class="column qr-column">
-                        <h4 class="ui.inverted.header.footer">Desarrollado por</h4>
+                        <h4 class="ui.inverted.header.footer">
+                            Desarrollado por
+                        </h4>
                         <div class="logo-container-movilnet">
                             <a href="http://www.movilnet.com.ve/sitio/">
                                 <img
-                                    src="src/movilnet.png"
+                                    src="src/assets/images/movilnet.png"
                                     alt="Logo Movilnet"
                                     width="120"
                                 />
@@ -447,20 +444,6 @@
         <script>
             // Inicializar componentes de Semantic UI
             $(".ui.checkbox").checkbox();
-
-            // Smooth scroll para enlaces de anclaje
-            $('a[href^="#"]').on("click", function (event) {
-                var target = $(this.getAttribute("href"));
-                if (target.length) {
-                    event.preventDefault();
-                    $("html, body").stop().animate(
-                        {
-                            scrollTop: target.offset().top,
-                        },
-                        1000
-                    );
-                }
-            });
         </script>
     </body>
 </html>
