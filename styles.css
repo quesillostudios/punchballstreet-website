@@ -1,42 +1,53 @@
 body {
-    background-color: #FFB700;
+    background-color: #ffb700;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 100%;
 }
 a {
-    color: rgb(0, 0, 0)!important;
+    color: rgb(0, 0, 0) !important;
 }
 a:hover {
-    color: rgb(59, 46, 0) !important
+    color: rgb(59, 46, 0) !important;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-display: flex !important;
 }
 .ui.inverted.menu {
     background-color: #0f0f0f;
     border-radius: 0;
-    display: flex;
+    display: inline-block;
     text-align: center;
 }
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.7)),
-        url("src/punchball-logo-animado.mp4") no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.7));
     background-size: contain;
-    padding: 250px 250px 250px 250px;
+    margin: auto;
+    border: auto;
+    padding: 35rem 2rem 2rem 2rem;
     text-align: center;
+    align-content: center;
     color: white;
+    position: relative;
+    min-height: 10%;
+    max-height: 60rem;
+    height: 60rem;
+    overflow: hidden;
 }
 .hero-video {
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 80%;
-    min-height: 80%;
-    width: auto;
-    height: auto;
+    width: 1920px;
+    height: 1080px;
+    min-width: 25%;
+    min-height: 25%;
+    max-width: 100%;
+    max-height: 100%;
     transform: translateX(-50%) translateY(-50%);
     z-index: -1;
-}
-.hero-section {
-    position: relative;
-    height: 110vh;
-    overflow: hidden;
 }
 /**
 .hero-section {
@@ -50,10 +61,13 @@ a:hover {
 }**/
 .cta-button {
     margin-top: 30px;
+    display: inline-block !important;
+    text-size-adjust: 80%;
 }
 .column {
-    display: flex !important;
+    display: inline-flex !important;
     justify-content: center !important;
+    width: 100%;
 }
 .game-features {
     padding: 80px 0;
@@ -63,12 +77,6 @@ a:hover {
 .screenshot-section {
     padding: 80px 0;
     background-color: #1b1c1d;
-}
-.footer {
-    background-color: #0f0f0f;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
 }
 .character-card {
     background: #ffffff !important;
@@ -88,7 +96,9 @@ a:hover {
     padding: 70px;
 }
 #downloader {
+    position-visibility: always;
     color: black !important;
+    display: inline-flex;
 }
 #downloader:hover {
     color: white;
@@ -97,8 +107,92 @@ a:hover {
     color: gray;
 }
 #trailer {
-    color: #FFB700 !important;
+    color: #ffb700 !important;
 }
 #trailer:hover {
     color: black !important;
+}
+.column p {
+    color: #ccc;
+    line-height: 1.5;
+}
+/* Footer y columnas - Estilos mejorados */
+.footer {
+    background-color: #0f0f0f;
+    color: white;
+    margin-top: auto;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 2px solid #ff5722;
+}
+
+.ui.stackable.three.column.grid {
+    display: flex;
+    align-items: stretch; /* Asegura que todas las columnas tengan la misma altura */
+}
+
+.column.qr-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Asegura que todas las columnas ocupen toda la altura disponible */
+    padding: 20px 15px; /* Añade padding consistente */
+}
+
+/* Encabezados consistentes */
+.ui.inverted.header.footer {
+    min-height: 60px; /* Altura fija para todos los encabezados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Contenido de texto consistente */
+.column.qr-column > p {
+    flex-grow: 1; /* Hace que los párrafos ocupen el espacio disponible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    min-height: 80px; /* Altura mínima para mantener consistencia */
+}
+
+/* Contenedores de imagen consistentes */
+.qr-container, .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Alinea el contenido hacia abajo */
+    flex-grow: 1;
+    padding: 15px 0;
+}
+
+.qr-container img, .logo-container img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.qr-container img:hover, .logo-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 767px) {
+    .column.qr-column {
+        margin: 1.5rem 0;
+    }
+    
+    .ui.inverted.header.footer {
+        min-height: auto;
+        margin-bottom: 0.8rem;
+    }
+    
+    .column.qr-column > p {
+        min-height: auto;
+        margin-bottom: 1rem;
+    }
 }
