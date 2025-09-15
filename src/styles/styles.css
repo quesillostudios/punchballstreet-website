@@ -2,6 +2,7 @@ body {
     background-color: #ffb700;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     max-width: 100%;
+    min-width: 100%;
 }
 a {
     color: rgb(0, 0, 0) !important;
@@ -141,7 +142,7 @@ h4 {
 
 /* Encabezados consistentes */
 .ui.inverted.header.footer {
-    min-height: 60px; /* Altura fija para todos los encabezados */
+    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,7 +151,6 @@ h4 {
     font-size: 1.2rem;
 }
 
-/* Contenido de texto consistente */
 .column.qr-column > p {
     flex-grow: 1; /* Hace que los párrafos ocupen el espacio disponible */
     display: flex;
@@ -160,7 +160,6 @@ h4 {
     min-height: 80px; /* Altura mínima para mantener consistencia */
 }
 
-/* Contenedores de imagen consistentes */
 .qr-container,
 .logo-container-movilnet {
     display: flex;
@@ -199,15 +198,22 @@ h4 {
         margin-bottom: 1rem;
     }
 }
+.nav-container {
+    display: flex;
+    min-width: 25%;
+    flex-direction: column;
+}
 .custom-navbar {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     background-color: #1b1c1d;
-    padding: 0 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 0 4rem;
+    box-shadow: 0 0.3rem 5rem rgba(0, 0, 0, 0.5);
     position: relative;
-    max-width: auto;
-    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100rem;
 }
 
 .nav-section {
@@ -217,10 +223,12 @@ h4 {
 
 .nav-section.left {
     justify-content: flex-end;
+    width: 10rem;
 }
 
 .nav-section.right {
     justify-content: flex-start;
+    width: 10rem;
 }
 
 .logo-container {
@@ -236,6 +244,7 @@ h4 {
     font-weight: 500;
     transition: all 0.3s ease;
     position: relative;
+    display: flex;
 }
 
 .nav-item:hover {
