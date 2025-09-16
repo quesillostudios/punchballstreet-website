@@ -68,27 +68,28 @@
         <!-- Sección Hero -->
         <section class="hero-section">
             <video
-                class="hero-video"
-                autoplay
-                muted
-                poster="src/assets/images/LOGOS-13.png"
+                    id="hero-video"
+                    class="hero-video"
+                    autoplay
+                    muted
+                    poster="src/assets/images/LOGOS-13.png"
             >
                 <source
-                    src="src/assets/videos/punchball-logo-animado.mp4"
-                    type="video/mp4"
+                        src="src/assets/videos/punchball-logo-animado.mp4"
+                        type="video/mp4"
                 />
             </video>
             <div class="ui text container" id="hero-content">
                 <h1
                     class="ui inverted header"
-                    style="font-size: 2.7rem; display: inline-block"
+                    style="font-size: 2.7rem; display: inline-block; line-height: 1rem; margin-bottom: 0.2rem; margin-top: 1rem;"
                 >
                     DOMINA LAS CALLES
                 </h1>
                 <h2
                     class="ui inverted header"
                     style="
-                        font-weight: 0.5rem;
+                        font-weight: 300;
                         font-size: 1.5rem;
                         display: inline-block;
                         line-height: 1.7rem;
@@ -103,7 +104,7 @@
                         class="ui huge button"
                         style="display: inline-block; background-color: #ffb700"
                     >
-                        <a href="">¡Jugar Ahora!</a>
+                        <a href="https://files.catbox.moe/c7kp87.apk">¡Jugar Ahora!</a>
                     </div>
                     <!--Trailer Button
                 <div class="ui huge inverted button">
@@ -277,7 +278,7 @@
                             >
                                 <div class="header">Ramón</div>
                                 <div class="meta">
-                                    <span class="category">Desconocida</span>
+                                    <span class="category">Acta de nacimiento perdida</span>
                                 </div>
                                 <div class="description">
                                     Dicen sus vecinos que fue un excelente
@@ -296,9 +297,9 @@
         <section class="screenshot-section">
             <div class="ui container">
                 <h2
-                    id="gallery"
-                    class="ui inverted header centered"
-                    style="
+                        id="gallery"
+                        class="ui inverted header centered"
+                        style="
                         color: #ffb700;
                         font-size: 2.5rem;
                         margin-bottom: 50px;
@@ -306,31 +307,67 @@
                 >
                     GALERÍA
                 </h2>
-                <div class="ui stackable three column grid">
+                <div class="ui stackable three column grid gallery-grid">
                     <div class="column">
                         <img
-                            class="ui rounded image"
-                            alt="Screenshot"
-                            src="https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80"
+                                class="ui rounded image gallery-item"
+                                alt="Screenshot"
+                                src="./src/assets/images/screenshoots/Punchball_Screenshoot_1.jpg"
                         />
                     </div>
                     <div class="column">
                         <img
-                            class="ui rounded image"
-                            alt="Screenshot"
-                            src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                                class="ui rounded image gallery-item"
+                                alt="Screenshot"
+                                src="./src/assets/images/screenshoots/Punchball_Screenshoot_2.jpg"
                         />
                     </div>
                     <div class="column">
                         <img
-                            class="ui rounded image"
-                            alt="Screenshot"
-                            src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
+                                class="ui rounded image gallery-item"
+                                alt="Screenshot"
+                                src="./src/assets/images/screenshoots/Punchball_Screenshoot_3.jpg"
+                        />
+                    </div>
+                    <div class="column">
+                        <img
+                                class="ui rounded image gallery-item"
+                                alt="Screenshot"
+                                src="./src/assets/images/screenshoots/Punchball_Screenshoot_4.jpg"
+                        />
+                    </div>
+                    <div class="column">
+                        <img
+                                class="ui rounded image gallery-item"
+                                alt="Screenshot"
+                                src="./src/assets/images/screenshoots/Punchball_Screenshoot_5.jpg"
+                        />
+                    </div>
+                    <div class="column">
+                        <img
+                                class="ui rounded image gallery-item"
+                                alt="Screenshot"
+                                src="./src/assets/images/screenshoots/Punchball_Screenshoot_6.jpg"
                         />
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Gallery fullscreen overlay -->
+        <div id="gallery-overlay" class="gallery-overlay" aria-hidden="true">
+            <div class="gallery-inner">
+                <button class="gallery-close" aria-label="Cerrar">&times;</button>
+                <button class="gallery-prev" aria-label="Anterior">&#10094;</button>
+                <div class="gallery-stage">
+                    <img id="gallery-image" src="" alt="Imagen ampliada" />
+                    <div id="gallery-caption" class="gallery-caption"></div>
+                </div>
+                <button class="gallery-next" aria-label="Siguiente">&#10095;</button>
+                <div class="gallery-counter" id="gallery-counter"></div>
+            </div>
+        </div>
+
 
         <!-- Sección de Newsletter 
 
@@ -370,6 +407,8 @@
     -->
         <!-- Animaciones-->
         <script>
+            import gsap from "./src/scripts/gsap-core";
+
             gsap.from("#hero-content", {
                 duration: 3,
                 opacity: 0,
@@ -394,6 +433,7 @@
                 delay: 1,
             });
         </script>
+
         <!-- Footer -->
         <footer class="footer">
             <div class="ui container">
@@ -411,12 +451,8 @@
                         <h4 class="ui.inverted.header.footer">
                             ¡Descárgalo ahora!
                         </h4>
-                        <div class="qr-container">
-                            <img
-                                src="src/assets/images/qr1.png"
-                                alt="Código QR"
-                                width="120"
-                            />
+                        <div class="qr-container" id="qr-container" data-qr-link="https://files.catbox.moe/c7kp87.apk">
+                            <div id="qr-placeholder" aria-hidden="true"></div>
                             <p style="margin-top: 10px; font-size: 0.9em">
                                 Escanea para descargar
                             </p>
@@ -443,10 +479,18 @@
                 </p>
             </div>
         </footer>
+
         <script>
             // Inicializar componentes de Semantic UI
             $(".ui.checkbox").checkbox();
         </script>
+
+        <!-- Scripts -->
+        <script src="src/scripts/gallery.js"></script>
+        <script src="src/scripts/video-replay.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+        <script src="src/scripts/qr-generator.js"></script>
     </body>
 </html>
 
