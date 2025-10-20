@@ -1,20 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Farsan&family=Permanent+Marker&family=Racing+Sans+One&display=swap');
+:root {
+    --first-color: #1D2935;
+    --second-color: #f1c40f;
+    --third-color: #e84393;
+    --fourth-color: #3498db;
+    --fifth-color: #9b59b6;
+    --sixth-color: #CAD6E2;
+    --principal-text: rgb(19, 19, 19);
+    --secondary-text: white;
+    --first-colorgradient: rgba(29, 41, 53, 0.2)
+}
 body {
-    background-color: #ffb700;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Racing Sans One", Tahoma, Geneva, Verdana, sans-serif !important;
     max-width: 100%;
     min-width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    min-width: 320px;
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.4285em;
+    color: var(--first-colorgradient);
+    background-image: url(/src/assets/images/negativo.png);
 }
 a {
-    color: rgb(0, 0, 0) !important;
+    color: var(--principal-text) !important;
 }
 a:hover {
-    color: rgb(59, 46, 0) !important;
+    color: var(--principal-text) !important;
 }
 h1,
 h2,
 h3,
 h4 {
     font-weight: 600 !important;
+    font-family: "Racing Sans One", Verdana, Geneva, Tahoma, sans-serif !important;
 }
 /* .ui.inverted.menu {
     background-color: #0f0f0f;
@@ -23,7 +44,8 @@ h4 {
     text-align: center;
 } */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.7));
+    /*background: linear-gradient(rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.7));*/
+    background: linear-gradient(var(--first-colorgradient), var(--first-colorgradient));
     background-size: contain;
     margin: auto;
     border: none;
@@ -36,7 +58,23 @@ h4 {
     max-height: 60rem;
     height: 60rem;
     overflow: hidden;
+
+    h1 {
+        font-family: "Racing Sans One", Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 5rem;
+        color: var(--first-color);
+        -webkit-text-stroke: 0.00005rem var(--second-color);
+    }
 }
+.ui.inverted.header:first-of-type {
+        font-size: 1.5rem;
+        font-family: "Permanent marker", Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 300;
+        display: inline-block;
+        line-height: 1.7rem;
+        color: var(--principal-text);
+}
+
 .hero-video {
     position: absolute;
     top: 50%;
@@ -50,42 +88,169 @@ h4 {
     transform: translateX(-50%) translateY(-50%);
     z-index: -1;
 }
-/**
-.hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.7)),
-        url("src/LOGOS-12.png") no-repeat center center;
-    background-size: contain;
-    padding: 150px;
-    display: flex;
-    text-align: center;
-    color: white;
-}**/
-.cta-button {
-    margin-top: 30px;
+.ui.huge.buttons .button,
+.ui.huge.buttons .or,
+.ui.huge.button {
+    border: 0.2rem solid var(--fifth-color);
+    z-index: 2;
+    background-color: var(--sixth-color);
+    border-radius: 8rem;
+    font-family: "Permanent Marker", Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: -3rem;
+    position: relative;
     display: inline-block !important;
     text-size-adjust: 80%;
+    cursor: pointer;
+    display: inline-block;
+}
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+.ui.huge.button::before {
+    content: "";
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,var(--fourth-color),var(--fifth-color),var(--third-color),var(--fifth-color),var(--fourth-color),var(--fifth-color),var(--third-color),var(--fifth-color));
+    background-size: 800%;
+    border-radius: 20px;
+    animation: glowing 20s linear infinite;
+}
+.ui.huge.button:hover {
+    transform: scale(1.1);
+}
+.ui.container {
+    display: inline-block;
+    max-width: 100% !important;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    color: var(--second-color);
+}
+.ui.inverted.header {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
 }
 .column {
     display: inline-flex !important;
     justify-content: center !important;
     width: 100%;
 }
-.game-features {
+@keyframes kimberlyrun {
+    0% {
+        background-position: 700% -80%;
+    }
+    100% {
+        background-position: -100% 100%;;
+    }
+}
+@keyframes myguelrun {
+    0% {
+        background-position: -100% 0%;
+    }
+    100% {
+        background-position: 700% 100%;;
+    }
+}
+.game-features1 {
     padding: 80px 0;
-    background-color: oklab(16.842% 0 -0.00002);
-    color: white;
+    background-color: var(--fifth-color);
+    background-image: url(/src/assets/images/KIMBERLY-front.gif);
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    left: -90%;
+    animation: kimberlyrun 4s linear infinite;
+    color: var(--secondary-text); 
+
+    .ui.inverted.segment,
+    .ui.primary.inverted.segment {
+        background: var(--first-color);
+    }
+    .ui.inverted.segment:hover {
+        transform: scale(1.05);
+        border: 2px solid var(--fourth-color) !important;
+    }
+    .ui.inverted.header {
+        color: var(--second-color);
+        font-family: "Racing Sans One", Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+        font-family: "Permanent marker", Verdana, Geneva, Tahoma, sans-serif !important;
+        color: var(--fifth-color)
+    }
+
+    p {
+        font-size: 1.5rem;
+        font-family:"Farsan", Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+.game-features2 {
+    padding: 80px 0;
+    background-color: var(--fifth-color);
+    background-image: url(/src/assets/images/myguel-front.gif);
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    left: -90%;
+    animation: myguelrun 3s linear infinite;
+    color: var(--secondary-text); 
+
+    .ui.inverted.header {
+        color: var(--second-color);
+        font-family: "Racing Sans One", Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+        font-family: "Permanent marker", Verdana, Geneva, Tahoma, sans-serif !important;
+        color: var(--fifth-color)
+    }
+
+    p {
+        font-size: 1.5rem;
+        font-family:"Farsan", Verdana, Geneva, Tahoma, sans-serif;
+    }
 }
 .screenshot-section {
     padding: 80px 0;
-    background-color: #1b1c1d;
+    background-image: url(/src/assets/images/negativo.png);
 }
 .character-card {
-    background: #ffffff !important;
-    border-radius: 10px !important;
-    transition: transform 0.3s;
+    background: var(--sixth-color);
+
+    .header {
+        font-family: "Permanent marker", Verdana, Geneva, Tahoma, sans-serif !important;
+        font-size: 2rem !important;
+    }
+
+    .description {
+        font-family: "Farsan", Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.5rem;
+    }
+}
+.content {
+    background-color: var(--second-color) !important;
 }
 .character-card:hover {
     transform: translateY(-15px);
+    border: 2px solid var(--fourth-color) !important;
+    transform: scale(1.05);
 }
 .newsletter-form {
     background-color: #2c2d2e;
@@ -96,35 +261,28 @@ h4 {
     margin: auto;
     padding: 70px;
 }
-#downloader {
-    position-visibility: always;
-    color: black !important;
-    display: inline-flex;
-}
-#downloader:hover {
-    color: white;
-}
-#downloader:visited {
-    color: gray;
-}
-#trailer {
-    color: #ffb700 !important;
-}
-#trailer:hover {
-    color: black !important;
-}
 .column p {
-    color: #ccc;
+    color: var(--secondary-text);
     line-height: 1.5;
 }
 /* Footer y columnas - Estilos mejorados */
 .footer {
-    background-color: #0f0f0f;
-    color: white;
+    background-color: var(--first-color);
+    color: var(--secondary-text);
     margin-top: auto;
     padding: 40px 0;
     text-align: center;
-    border-top: 2px solid #ff5722;
+    border-top: 2px solid var(--fifth-color);
+
+    h4 {
+        color: var(--principal-text);
+        font-size: 2.5rem;
+        -webkit-text-stroke: 0.0005rem var(--second-color);
+    }
+    p {
+        color: var(--principal-text);
+        font-size: 1.6rem;
+    }
 }
 
 .ui.stackable.three.column.grid {
@@ -148,7 +306,7 @@ h4 {
     justify-content: center;
     text-align: center;
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 2rem !important;
 }
 
 .column.qr-column > p {
@@ -202,18 +360,22 @@ h4 {
     display: flex;
     min-width: 25%;
     flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
 }
 .custom-navbar {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #1b1c1d;
+    background-color: var(--first-color);
     padding: 0 4rem;
     box-shadow: 0 0.3rem 5rem rgba(0, 0, 0, 0.5);
-    position: relative;
     max-width: 100%;
     min-width: 100%;
     width: 100rem;
+    font-size: 2.5rem;
+    height: 5rem;
 }
 
 .nav-section {
@@ -239,7 +401,7 @@ h4 {
 }
 
 .nav-item {
-    color: #ffb700 !important;
+    color: var(--second-color) !important;
     padding: 18px 20px !important;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -248,7 +410,7 @@ h4 {
 }
 
 .nav-item:hover {
-    background-color: #ffb700ff !important;
+    background-color: var(--second-color) !important;
     transform: translateY(-2px);
 }
 
@@ -259,7 +421,7 @@ h4 {
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: #ffb700;
+    background-color: var(--second-color);
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -269,18 +431,21 @@ h4 {
 }
 
 .logo {
-    height: 2rem;
+    height: 2.2rem;
     transition: transform 0.3s ease;
 }
 
 .logo:hover {
     transform: rotate(360deg);
 }
-
+#gallery {
+        font-size: 4rem;
+        color: var(--second-color);
+        margin-bottom: 50px;
+}
 .gallery-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.92);
     display: none;
     align-items: center;
     justify-content: center;
@@ -328,9 +493,9 @@ h4 {
 .gallery-prev,
 .gallery-next {
     position: absolute;
-    background: rgba(0,0,0,0.45);
+    background: var(--first-colorgradient);
     border: none;
-    color: #fff;
+    color: var(--sixth-color);
     font-size: 2rem;
     padding: 10px 14px;
     border-radius: 8px;

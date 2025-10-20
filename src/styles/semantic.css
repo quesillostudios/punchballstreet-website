@@ -66,17 +66,6 @@ html {
   /* 2 */
 }
 
-/* Sections
-   ========================================================================== */
-
-/**
- * Remove the margin in all browsers (opinionated).
- */
-
-body {
-  margin: 0;
-}
-
 /**
  * Add the correct display in IE 9-.
  */
@@ -148,22 +137,6 @@ pre {
   font-size: 1em;
   /* 2 */
 }
-
-/* Text-level semantics
-   ========================================================================== */
-
-/**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
- */
-
-a {
-  background-color: transparent;
-  /* 1 */
-  -webkit-text-decoration-skip: objects;
-  /* 2 */
-}
-
 /**
  * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
@@ -558,19 +531,6 @@ html {
   font-size: 14px;
 }
 
-body {
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
-  min-width: 320px;
-  background: #FFFFFF;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 1.4285em;
-  color: rgba(0, 0, 0, 0.87);
-  font-smoothing: antialiased;
-}
-
 /***** Headers ******/
 
 h1,
@@ -637,23 +597,6 @@ p:first-child {
 p:last-child {
   margin-bottom: 0em;
 }
-
-/*-------------------
-        Links
---------------------*/
-
-a {
-  color: #4183C4;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #1e70bf;
-  text-decoration: none;
-}
-
-/*****************************Scrollbars
-*******************************/
 
 /*******************************
           Highlighting
@@ -1487,17 +1430,6 @@ Types
   font-size: 1.28571429rem;
 }
 
-.ui.huge.buttons .button,
-.ui.huge.buttons .or,
-.ui.huge.button {
-  font-size: 1.42857143rem;
-}
-
-.ui.massive.buttons .button,
-.ui.massive.buttons .or,
-.ui.massive.button {
-  font-size: 1.71428571rem;
-}
 
 /*--------------
     Icon Only
@@ -4861,13 +4793,7 @@ Site Overrides
 
 /* All Sizes */
 
-.ui.container {
-  display: inline-block;
-  max-width: 100% !important;
-  margin: 0 auto;
-  text-align: center;
-  justify-content: center;
-}
+
 
 /* Mobile */
 
@@ -6881,9 +6807,7 @@ h5.ui.header .sub.header {
       Inverted
 --------------------*/
 
-.ui.inverted.header {
-  color: #FFFFFF;
-}
+
 
 .ui.inverted.header .sub.header {
   color: rgba(255, 255, 255, 0.8);
@@ -18723,11 +18647,7 @@ ol.ui.horizontal.list li:before,
   box-shadow: none;
 }
 
-.ui.inverted.segment,
-.ui.primary.inverted.segment {
-  background: #1B1C1D;
-  color: rgba(255, 255, 255, 0.9);
-}
+
 
 /* Nested */
 
@@ -33311,85 +33231,6 @@ select.ui.dropdown {
     Scrolling
 ---------------*/
 
-/* Scrolling Dimmer */
-
-.scrolling.dimmable.dimmed {
-  overflow: hidden;
-}
-
-.scrolling.dimmable > .dimmer {
-  justify-content: flex-start;
-}
-
-.scrolling.dimmable.dimmed > .dimmer {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.scrolling.dimmable > .dimmer {
-  position: fixed;
-}
-
-.modals.dimmer .ui.scrolling.modal {
-  margin: 1rem auto;
-}
-
-/* Undetached Scrolling */
-
-.scrolling.undetached.dimmable.dimmed {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.scrolling.undetached.dimmable.dimmed > .dimmer {
-  overflow: hidden;
-}
-
-.scrolling.undetached.dimmable .ui.scrolling.modal {
-  position: absolute;
-  left: 50%;
-  margin-top: 1rem !important;
-}
-
-/* Scrolling Content */
-
-.ui.modal .scrolling.content {
-  max-height: calc(80vh - 10em);
-  overflow: auto;
-}
-
-/*--------------
-   Full Screen
----------------*/
-
-.ui.fullscreen.modal {
-  width: 95% !important;
-  margin: 1em auto;
-}
-
-.ui.fullscreen.modal > .header {
-  padding-right: 2.25rem;
-}
-
-.ui.fullscreen.modal > .close {
-  top: 1.0535rem;
-  right: 1rem;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-/*--------------
-      Size
----------------*/
-
-.ui.modal {
-  font-size: 1rem;
-}
-
-/* Mini */
-
-.ui.mini.modal > .header:not(.ui) {
-  font-size: 1.3em;
-}
 
 /* Mini Modal Width */
 
