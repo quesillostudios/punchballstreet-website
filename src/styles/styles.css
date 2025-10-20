@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Farsan&family=Permanent+Marker&family=Racing+Sans+One&display=swap');
 :root {
-    --first-color: #1D2935;
-    --second-color: #f1c40f;
-    --third-color: #e84393;
-    --fourth-color: #3498db;
-    --fifth-color: #9b59b6;
+    --first-color: #212121;
+    --second-color: #FAC402;
+    --third-color: #F5DD41;
+    --fourth-color: #646464;
+    --fifth-color: #474747;
     --sixth-color: #CAD6E2;
     --principal-text: rgb(19, 19, 19);
     --secondary-text: white;
-    --first-colorgradient: rgba(29, 41, 53, 0.2)
+    --first-colorgradient: rgba(41, 41, 41, 0.8);
+    --second-colorgradient: rgba(41, 41, 41, 0.2)
 }
 body {
-    font-family: "Racing Sans One", Tahoma, Geneva, Verdana, sans-serif !important;
     max-width: 100%;
     min-width: 100%;
     margin: 0px;
@@ -35,7 +34,6 @@ h2,
 h3,
 h4 {
     font-weight: 600 !important;
-    font-family: "Racing Sans One", Verdana, Geneva, Tahoma, sans-serif !important;
 }
 /* .ui.inverted.menu {
     background-color: #0f0f0f;
@@ -45,7 +43,7 @@ h4 {
 } */
 .hero-section {
     /*background: linear-gradient(rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.7));*/
-    background: linear-gradient(var(--first-colorgradient), var(--first-colorgradient));
+    background: linear-gradient(var(--first-colorgradient), var(--second-colorgradient));
     background-size: contain;
     margin: auto;
     border: none;
@@ -60,15 +58,12 @@ h4 {
     overflow: hidden;
 
     h1 {
-        font-family: "Racing Sans One", Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 5rem;
-        color: var(--first-color);
-        -webkit-text-stroke: 0.00005rem var(--second-color);
+        font-size: 4rem;
+        color: var(--secondary-text);
     }
 }
 .ui.inverted.header:first-of-type {
         font-size: 1.5rem;
-        font-family: "Permanent marker", Verdana, Geneva, Tahoma, sans-serif;
         font-weight: 300;
         display: inline-block;
         line-height: 1.7rem;
@@ -95,7 +90,6 @@ h4 {
     z-index: 2;
     background-color: var(--sixth-color);
     border-radius: 8rem;
-    font-family: "Permanent Marker", Verdana, Geneva, Tahoma, sans-serif;
     margin-top: -3rem;
     position: relative;
     display: inline-block !important;
@@ -159,10 +153,10 @@ h4 {
 }
 @keyframes myguelrun {
     0% {
-        background-position: -100% 0%;
+        background-position: -500% 0%;
     }
     100% {
-        background-position: 700% 100%;;
+        background-position: 200% 50%;;
     }
 }
 .game-features1 {
@@ -185,19 +179,16 @@ h4 {
     }
     .ui.inverted.header {
         color: var(--second-color);
-        font-family: "Racing Sans One", Verdana, Geneva, Tahoma, sans-serif;
         font-size: 4rem;
     }
 
     h3 {
-        font-size: 2.2rem;
-        font-family: "Permanent marker", Verdana, Geneva, Tahoma, sans-serif !important;
-        color: var(--fifth-color)
+        font-size: 2rem;
+        color: var(--secondary-text)
     }
 
     p {
-        font-size: 1.5rem;
-        font-family:"Farsan", Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.3rem;
     }
 }
 .game-features2 {
@@ -212,19 +203,16 @@ h4 {
 
     .ui.inverted.header {
         color: var(--second-color);
-        font-family: "Racing Sans One", Verdana, Geneva, Tahoma, sans-serif;
         font-size: 4rem;
     }
 
     h3 {
         font-size: 2.2rem;
-        font-family: "Permanent marker", Verdana, Geneva, Tahoma, sans-serif !important;
         color: var(--fifth-color)
     }
 
     p {
         font-size: 1.5rem;
-        font-family:"Farsan", Verdana, Geneva, Tahoma, sans-serif;
     }
 }
 .screenshot-section {
@@ -232,16 +220,14 @@ h4 {
     background-image: url(/src/assets/images/negativo.png);
 }
 .character-card {
-    background: var(--sixth-color);
+    background: var(--principal-text);
 
     .header {
-        font-family: "Permanent marker", Verdana, Geneva, Tahoma, sans-serif !important;
         font-size: 2rem !important;
     }
 
     .description {
-        font-family: "Farsan", Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
 .content {
@@ -275,13 +261,12 @@ h4 {
     border-top: 2px solid var(--fifth-color);
 
     h4 {
-        color: var(--principal-text);
-        font-size: 2.5rem;
-        -webkit-text-stroke: 0.0005rem var(--second-color);
+        color: var(--secondary-text);
+        font-size: 2rem;
     }
     p {
-        color: var(--principal-text);
-        font-size: 1.6rem;
+        color: var(--secondary-text);
+        font-size: 1.2rem;
     }
 }
 
@@ -374,8 +359,8 @@ h4 {
     max-width: 100%;
     min-width: 100%;
     width: 100rem;
-    font-size: 2.5rem;
-    height: 5rem;
+    font-size: 2rem;
+    height: 4rem;
 }
 
 .nav-section {
