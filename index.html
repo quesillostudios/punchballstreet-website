@@ -46,7 +46,12 @@
     </head>
     <body>
         <div class="nav-container">
-            <div class="custom-navbar">
+            <nav class="custom-navbar">
+                <button class="hamburger-btn" id="hamburgerBtn">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
                 <div class="nav-section left">
                     <a href="index.html" class="nav-item">INICIO</a>
                     <a href="#characteristics" class="nav-item"
@@ -63,12 +68,24 @@
                         />
                     </a>
                 </div>
-
+                
+                <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
                 <div class="nav-section right">
                     <a href="#avatars" class="nav-item">AVATARES</a>
                     <a href="#gallery" class="nav-item">GALERÍA</a>
                 </div>
-            </div>
+
+                <!-- Menú Móvil (oculto en desktop) -->
+                <div class="mobile-menu" id="mobileMenu">
+                    <div class="mobile-nav-section">
+                        <a href="#home" class="mobile-nav-item">Inicio</a>
+                        <a href="#features" class="mobile-nav-item">Características</a>
+                        <a href="#gallery" class="mobile-nav-item">Galería</a>
+                        <a href="#download" class="mobile-nav-item">Descargar</a>
+                        <!-- LOS MISMOS ELEMENTOS QUE EN DESKTOP -->
+                    </div>
+                </div>
+            </nav>
         </div>
         <!-- Sección Hero -->
         <section class="hero-section">
@@ -397,6 +414,39 @@
                 x: 700,
                 stagger: 0.3,
                 delay: 1,
+            });
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburgerBtn = document.getElementById('hamburgerBtn');
+                const mobileMenu = document.getElementById('mobileMenu');
+                const mobileOverlay = document.getElementById('mobileMenuOverlay');
+                
+                if (hamburgerBtn && mobileMenu && mobileOverlay) {
+                    hamburgerBtn.addEventListener('click', function() {
+                        this.classList.toggle('active');
+                        mobileMenu.classList.toggle('active');
+                        mobileOverlay.classList.toggle('active');
+                        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+                    });
+                    
+                    mobileOverlay.addEventListener('click', function() {
+                        hamburgerBtn.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                        this.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                    
+                    // Cerrar menú al hacer clic en enlaces móviles
+                    const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+                    mobileNavItems.forEach(item => {
+                        item.addEventListener('click', function() {
+                            hamburgerBtn.classList.remove('active');
+                            mobileMenu.classList.remove('active');
+                            mobileOverlay.classList.remove('active');
+                            document.body.style.overflow = '';
+                        });
+                    });
+                }
             });
         </script>
 
