@@ -46,11 +46,16 @@
     </head>
     <body>
         <div class="nav-container">
-            <div class="custom-navbar">
+            <nav class="custom-navbar">
+                <button class="hamburger-btn" id="hamburgerBtn">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
                 <div class="nav-section left">
-                    <a href="index.html" class="nav-item">Inicio</a>
+                    <a href="index.html" class="nav-item">INICIO</a>
                     <a href="#characteristics" class="nav-item"
-                        >Características</a
+                        >CARACTERÍSTICAS</a
                     >
                 </div>
 
@@ -63,33 +68,25 @@
                         />
                     </a>
                 </div>
-
+                
+                <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
                 <div class="nav-section right">
-                    <a href="#avatars" class="nav-item">Avatares</a>
-                    <a href="#gallery" class="nav-item">Galería</a>
+                    <a href="#avatars" class="nav-item">AVATARES</a>
+                    <a href="#gallery" class="nav-item">GALERÍA</a>
                 </div>
-            </div>
+
+                <!-- Menú Móvil (oculto en desktop) -->
+                <div class="mobile-menu" id="mobileMenu">
+                    <div class="mobile-nav-section">
+                        <a href="#home" class="mobile-nav-item">Inicio</a>
+                        <a href="#features" class="mobile-nav-item">Características</a>
+                        <a href="#gallery" class="mobile-nav-item">Galería</a>
+                        <a href="#download" class="mobile-nav-item">Descargar</a>
+                        <!-- LOS MISMOS ELEMENTOS QUE EN DESKTOP -->
+                    </div>
+                </div>
+            </nav>
         </div>
-        <!-- Sección Hero
-    <section class="hero-section">
-        <div class="ui text container">
-            <h1 class="ui inverted header" style="font-size: 3.5rem;">
-                DOMINA LAS CALLES
-            </h1>
-            <h2 class="ui inverted header" style="font-weight: 300;">
-                El bullicio de la ciudad vs. la precisión del diamante: Tu nuevo desafío urbano
-            </h2>
-            <div class="cta-button">
-                <div id="descarga" class="ui huge primary button">
-                    ¡Jugar Ahora! <i class="right arrow icon"></i>
-                </div>
-                <div class="ui huge inverted button">
-                    Ver Trailer
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
         <!-- Sección Hero -->
         <section class="hero-section">
             <video
@@ -106,29 +103,17 @@
             </video>
             <div class="ui text container" id="hero-content">
                 <h1
-                    class="ui inverted header"
-                    style="font-size: 2.7rem; display: inline-block; line-height: 1rem; margin-bottom: 0.2rem; margin-top: 1rem;"
                 >
                     DOMINA LAS CALLES
                 </h1>
                 <h2
                     class="ui inverted header"
-                    style="
-                        font-weight: 300;
-                        font-size: 1.5rem;
-                        display: inline-block;
-                        line-height: 1.7rem;
-                    "
                 >
                     El bullicio de la ciudad vs. la precisión del diamante: Tu nuevo desafío urbano
                 </h2>
-                <div class="cta-button">
-                    <div
-                        id="downloader"
-                        class="ui huge button"
-                        style="display: inline-block; background-color: #ffb700"
-                    >
-                        <a href="https://files.catbox.moe/c7kp87.apk">¡Jugar Ahora!</a>
+                <div class="ui huge button">
+                    <div>
+                        <a href="https://punchball.s3.us-east-005.dream.io/builds/punchball_street_018.apk">¡Jugar Ahora!</a>
                     </div>
                     <!--Trailer Button
                 <div class="ui huge inverted button">
@@ -139,17 +124,9 @@
         </section>
 
         <!-- Sección de Características -->
-        <section class="game-features">
+        <section class="game-features1" id="characteristics">
             <div class="ui container">
-                <h2
-                    id="characteristics"
-                    class="ui inverted header centered"
-                    style="
-                        text-align: center;
-                        font-size: 2.5rem;
-                        margin-bottom: 50px;
-                        color: #ffb700;
-                    "
+                <h2 class="ui inverted header centered" 
                 >
                     CARACTERÍSTICAS PRINCIPALES
                 </h2>
@@ -160,7 +137,7 @@
                             class="ui raised very padded text segment inverted"
                             style="text-align: center"
                         >
-                            <i class="huge street view icon"></i>
+                            <img src="/src/assets/images/Trophy.gif" width="75px">
                             <h3>Elige tu leyenda callejera</h3>
                             <p>
                                 Buscarás demostrar ser el mejor jugador de
@@ -174,7 +151,7 @@
                             class="ui raised very padded text segment inverted"
                             style="text-align: center"
                         >
-                            <i class="huge map outline icon"></i>
+                            <img src="/src/assets/images/Delivery Location.gif" width="75px">
                             <h3>Ningún Partido Es Igual</h3>
                             <p>
                                 La distancia entre bases, la topografía del
@@ -188,7 +165,7 @@
                             class="ui raised very padded text segment inverted"
                             style="text-align: center"
                         >
-                            <i class="huge map signs icon"></i>
+                            <img src="/src/assets/images/Baseball.gif" width="75px">
                             <h3>Controla El Caos</h3>
                             <p>
                                 Golpea la pelota y prepárate para correr por
@@ -202,18 +179,10 @@
         </section>
 
         <!-- Sección de Avatares -->
-        <section class="game-features">
+        <section class="game-features2" id="avatars">
             <div class="ui container">
                 <h2
-                    id="avatars"
                     class="ui inverted header centered"
-                    style="
-                        color: #ffb700;
-                        text-align: center;
-                        font-size: 2.5rem;
-                        margin-bottom: 50px;
-                        margin-top: -1rem !important
-                    "
                 >
                     AVATARES
                 </h2>
@@ -234,7 +203,6 @@
                             </div>
                             <div
                                 class="content"
-                                style="background-color: #ffb700"
                             >
                                 <div class="header">Kimberly</div>
                                 <div class="meta">
@@ -265,7 +233,6 @@
                             </div>
                             <div
                                 class="content"
-                                style="background-color: #ffb700"
                             >
                                 <div class="header">Myguel</div>
                                 <div class="meta">
@@ -298,7 +265,6 @@
                             </div>
                             <div
                                 class="content"
-                                style="background-color: #ffb700"
                             >
                                 <div class="header">Ramón</div>
                                 <div class="meta">
@@ -323,11 +289,6 @@
                 <h2
                         id="gallery"
                         class="ui inverted header centered"
-                        style="
-                        color: #ffb700;
-                        font-size: 2.5rem;
-                        margin-bottom: 50px;
-                    "
                 >
                     GALERÍA
                 </h2>
@@ -454,6 +415,39 @@
                 stagger: 0.3,
                 delay: 1,
             });
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburgerBtn = document.getElementById('hamburgerBtn');
+                const mobileMenu = document.getElementById('mobileMenu');
+                const mobileOverlay = document.getElementById('mobileMenuOverlay');
+                
+                if (hamburgerBtn && mobileMenu && mobileOverlay) {
+                    hamburgerBtn.addEventListener('click', function() {
+                        this.classList.toggle('active');
+                        mobileMenu.classList.toggle('active');
+                        mobileOverlay.classList.toggle('active');
+                        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+                    });
+                    
+                    mobileOverlay.addEventListener('click', function() {
+                        hamburgerBtn.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                        this.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                    
+                    // Cerrar menú al hacer clic en enlaces móviles
+                    const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+                    mobileNavItems.forEach(item => {
+                        item.addEventListener('click', function() {
+                            hamburgerBtn.classList.remove('active');
+                            mobileMenu.classList.remove('active');
+                            mobileOverlay.classList.remove('active');
+                            document.body.style.overflow = '';
+                        });
+                    });
+                }
+            });
         </script>
 
         <!-- Footer -->
@@ -473,7 +467,7 @@
                         <h4 class="ui.inverted.header.footer">
                             ¡Descárgalo ahora!
                         </h4>
-                        <div class="qr-container" id="qr-container" data-qr-link="https://files.catbox.moe/c7kp87.apk">
+                        <div class="qr-container" id="qr-container" data-qr-link="https://punchball.s3.us-east-005.dream.io/builds/punchball_street_018.apk">
                             <div id="qr-placeholder" aria-hidden="true"></div>
                             <p style="margin-top: 10px; font-size: 0.9em">
                                 Escanea para descargar
@@ -485,7 +479,7 @@
                             Desarrollado por
                         </h4>
                         <div class="logo-container-movilnet">
-                            <a href="http://www.movilnet.com.ve/sitio/">
+                            <a href="http://www.movilnet.com.ve/sitio/" target="_blank">
                                 <img
                                     src="src/assets/images/movilnet.png"
                                     alt="Logo Movilnet"
