@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // CONFIG
     const webAppUrl = 'https://script.google.com/macros/s/AKfycbzSLZSk1hbO-Cv0oi4J-px2EoOz4dN5UjUSG3xiC5tCHvbKWHkehuWjIwIgsrk1KEWrYQ/exec';
     const metricsToken = 'pdQyvCyfZxasaGAh';
 
@@ -17,10 +18,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('source') && urlParams.get('source') === 'qr') {
-        console.log('Visita detectada desde QR. Enviando métrica...');
+        console.log('Visita detectada desde QR. Enviando métrica e iniciando descarga...');
+
         sendMetric('QRScan');
 
         history.replaceState(null, '', window.location.pathname);
+        const downloadLinkElement = document.querySelector('#downloadButton a');
+
+        if (downloadLinkElement && downloadLinkElement.href) {
+            const downloadUrl = downloadLinkElement.href;
+            console.log('Iniciando descarga desde:', downloadUrl);
+            window.location.href = downloadUrl;
+        } else {
+            console.warn('No se pudo encontrar el enlace de descarga principal. Usando fallback.');
+            window.location.href = 'https://punchball.s3.us-east-005.dream.io/builds/punchball_street_019.apk';
+        }
     }
 
     function sendMetric(eventType) {
