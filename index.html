@@ -111,7 +111,7 @@
                 >
                     El bullicio de la ciudad vs. la precisión del diamante: Tu nuevo desafío urbano
                 </h2>
-                <div class="ui huge button">
+                <div class="ui huge button" id="downloadButton">
                     <div>
                         <a href="https://punchball.s3.us-east-005.dream.io/builds/punchball_street_019.apk">¡Jugar Ahora!</a>
                     </div>
@@ -497,16 +497,15 @@
         </footer>
 
         <script>
-            // Inicializar componentes de Semantic UI
             $(".ui.checkbox").checkbox();
         </script>
 
         <!-- Scripts -->
-        <script src="src/scripts/gallery.js"></script>
-        <script src="src/scripts/video-replay.js"></script>
-
         <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
-        <script src="src/scripts/qr-generator.js"></script>
+        <script src="src/scripts/gallery.js" defer></script>
+        <script src="src/scripts/video-replay.js" defer></script>
+        <script src="src/scripts/qr-generator.js" defer></script>
+        <script src="src/scripts/metrics.js" defer></script>
     </body>
 </html>
 
