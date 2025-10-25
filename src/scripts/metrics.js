@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function sendMetric(eventType) {
-        if (!webAppUrl || webAppUrl === 'https://script.google.com/macros/s/AKfycbzSLZSk1hbO-Cv0oi4J-px2EoOz4dN5UjUSG3xiC5tCHvbKWHkehuWjIwIgsrk1KEWrYQ/exec') {
+        if (!webAppUrl || webAppUrl === '') {
             console.error('URL del Web App no configurada en metrics.js');
             return;
         }
