@@ -364,6 +364,21 @@ h4 {
         color: var(--secondary-text);
         font-size: 1.2rem;
     }
+    a {
+        color: var(--second-color) !important;
+        font-style: italic;
+        font-size: 1.5rem;
+    }
+    .instagram {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0.7rem 0 0.5rem 0.5rem !important;
+    }
+    svg {
+        display: inline-block;
+        vertical-align: middle;
+        align-items: center;
+    }
 }
 
 .ui.stackable.three.column.grid {
